@@ -1,0 +1,153 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #4CAF50; /* vert */
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    border-bottom: 2px solid #FFA500; /* orange */
+    padding-bottom: 10px;
+    color: #4CAF50; /* vert */
+    margin-top: 40px;
+}
+
+a {
+    color: #FFA500; /* orange */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4CAF50; /* vert */
+}
+
+section {
+    padding: 20px 0;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+}
+
+#reseaux-sociaux a {
+    background-color: #FFA500; /* orange */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#reseaux-sociaux a:hover {
+    background-color: #4CAF50; /* vert */
+}
+
+#jeu-concours {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.jeu-concours-input {
+    margin: 20px 0;
+}
+
+.jeu-concours-input input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.jeu-concours-button button {
+    padding: 10px 20px;
+    background-color: #58A55C; /* Couleur vert de votre logo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.jeu-concours-button button:hover {
+    background-color: #45a049; /* Une teinte plus foncée de vert */
+}
+
+
+.products {
+    display: flex;
+    justify-content: space-between; /* Espace uniformément les produits */
+    flex-wrap: wrap; /* Permet aux produits de passer à la ligne si l'espace est insuffisant */
+    margin: -10px;  /* Écart négatif pour équilibrer les marges des produits */
+}
+
+.product {
+    flex: 1; /* Les produits prennent tout l'espace disponible */
+    max-width: calc(33.33% - 20px); /* Limite la largeur de chaque produit à environ un tiers de l'espace, en déduisant une marge */
+    box-sizing: border-box;
+    margin: 10px; /* Espace entre les produits */
+    text-align: center; /* Centre le texte sous les images */
+}
+
+.product img {
+    width: 100%;
+    max-width: 150px; /* Limite la largeur maximale de l'image */
+    height: auto; /* Conserve les proportions de l'image */
+    display: block; /* Supprime l'espace sous l'image */
+    margin: 0 auto; /* Centre l'image horizontalement */
+}
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centrer les icônes horizontalement */
+    gap: 20px; /* Espace entre les icônes */
+}
+
+.social-icons a {
+    color: #4CAF50; /* vert */
+    font-size: 24px; /* Taille de l'icône */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FFA500; /* orange */
+}
+
+.carousel-content {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);  /* fond semi-transparent */
+}
+.carousel-content h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* Vous pouvez ajouter d'autres styles ou ajustements selon vos besoins */
+

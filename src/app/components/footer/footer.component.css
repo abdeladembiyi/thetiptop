@@ -1,0 +1,22 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.contact-section, .social-section {
+    flex-basis: 45%; 
+}
+
+.social-section a {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-section a:hover {
+    color: #007bff; 
+}
