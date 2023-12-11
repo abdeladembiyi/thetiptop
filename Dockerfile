@@ -1,5 +1,5 @@
 # Utilisez une image de base Node.js
-FROM node:16-alpine AS build
+FROM node:20-alpine AS build
 
 # Définissez le répertoire de travail dans le conteneur
 WORKDIR /app
@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Installez les dépendances
-RUN npm install
+RUN npm install --force
 
 # Copiez tous les fichiers de l'application dans le répertoire de travail
 COPY . .
 
 # Construisez l'application Angular en mode de production
-RUN npm run build -- --prod
+RUN npm run build 
 
 # Utilisez un serveur web léger pour servir l'application (par exemple, Nginx)
 FROM nginx:alpine
