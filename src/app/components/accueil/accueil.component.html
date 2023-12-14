@@ -266,8 +266,8 @@
                     </div>
                     <div class="game-contest-launch">
                         <div class="custom-search">
-                            <input type="text" class="custom-search-input" placeholder="Entrez votre numero de ticket ">
-                            <button class="custom-search-botton" type="submit">Lancer</button>
+                            <input type="text" [formControl]="numeroControl" class="custom-search-input" placeholder="Entrez votre numero de ticket ">
+                            <button class="custom-search-botton" type="submit" (click)="verifierNumero()">Lancer</button>
                         </div>
                     </div>
                 </div>
