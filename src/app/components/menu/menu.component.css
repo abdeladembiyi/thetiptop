@@ -424,3 +424,21 @@ text-align: justify;
     top: 0;
     width: 100%;
   }
+
+  .navbar .nav-link:hover {
+    color: #F7962F !important;
+  }
+
+  .btn.btn-login {
+    color: #fff;
+    background-color: #F7962F;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 0px solid;
+    font-weight: 500;
+  }
+
+  .btn.btn-login:hover {    
+    color: #ebebeb;
+    background: #dd8528;
+  }

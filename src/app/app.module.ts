@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ParticipationModalComponent } from './participation-modal/participation-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AccueilComponent,
     MenuComponent,
     FooterComponent,
-    ParticipationModalComponent
+    ParticipationModalComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         CarouselModule.forRoot(),
     BrowserAnimationsModule,    
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

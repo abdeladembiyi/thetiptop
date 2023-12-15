@@ -424,3 +424,24 @@ text-align: justify;
     top: 0;
     width: 100%;
   }
+
+  a.btn-primary {
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    margin-top: 15px;
+    background-color: #F7962F;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 21rem;
+    border: 0px solid;
+    text-decoration: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn.btn-login:hover, a.btn-primary:hover {    
+    color: #ebebeb;
+    background: #dd8528;
+  }

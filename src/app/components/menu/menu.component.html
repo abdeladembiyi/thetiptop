@@ -10,21 +10,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto me-5">
-                <li class="nav-item mb-3 me-4">
-                    <a class="nav-link active text-white fw-bold" aria-current="page" href="#">Accueil</a>
+                <li class="nav-item me-4">
+                    <a class="nav-link active text-white fw-bold" aria-current="page" href="#image-section">Accueil</a>
                 </li>
-                <li class="nav-item mb-3 me-4">
+                <li class="nav-item me-4">
                     <a class="nav-link text-white fw-bold" href="#">infos</a>
                 </li>
-                <li class="nav-item mb-3 me-4">
-                    <a class="nav-link text-white fw-bold" href="#">Jeu Concours</a>
+                <li class="nav-item me-4">
+                    <a class="nav-link text-white fw-bold" href="#last-section">Jeu Concours</a>
                 </li>
-                <li class="nav-item mb-3 me-4">
+                <li class="nav-item me-4">
                     <a class="nav-link text-white fw-bold" href="#">Contact</a>
                 </li>
             </ul>
             <div class="ms-auto">
-                <a href="#" class="btn btn-white">Se connecter</a>
+                <a href="#" class="btn btn-login"(click)="onSeConnecter()">{{ isLoggedIn ? 'Se déconnecter' : 'Se connecter' }}</a>
             </div>
         </div>
     </div>

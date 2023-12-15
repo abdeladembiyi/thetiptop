@@ -10,13 +10,27 @@ import { ParticipationModalComponent } from 'src/app/participation-modal/partici
   
 })
 export class AccueilComponent {
-  numeroControl = new FormControl('1234567890');
+  isLoggedIn = false;
+  numeroControl = new FormControl('');
+  private numerosGagnants: string[] = ['1234567890', '1122334455', '2233445566'];
+  private numerosDejaUtilises: string[] = ['9988776655', '8877665544', '0000000000'];
   
   constructor(public dialog: MatDialog) {}
 
   verifierNumero() {
-    if (this.numeroControl.value && this.numeroControl.value.length === 10) {
-      this.afficherPopin(this.genererMessage());
+    const numeroSaisi = this.numeroControl.value;
+    if (!this.ngOnInit()) {
+      this.afficherPopin('Attention', 'Vous devez vous connecter pour participer');
+      return;
+    }
+    if (numeroSaisi && numeroSaisi.length === 10) {
+      if (this.numerosDejaUtilises.includes(numeroSaisi)) {
+        this.afficherPopin("Attention", "Ce code est déjà utilisé. Veuillez saisir un autre.");
+      } else if (this.numerosGagnants.includes(numeroSaisi)) {
+        this.afficherPopin("Félicitations", this.genererMessage());
+      } else {
+        this.afficherPopin("Attention", "Ce code est invalide.");
+      }
     } else {
       alert("Veuillez entrer un numéro de 10 chiffres.");
     }
@@ -31,10 +45,14 @@ export class AccueilComponent {
     return "Félicitations, vous avez gagné un coffret découverte d’une valeur de 69€!";
   }
 
-  afficherPopin(message: string) {
+  afficherPopin(title:string, message: string) {
     this.dialog.open(ParticipationModalComponent, {
-      data: message
+      data: {title, message}
     });
   }
+
+  ngOnInit(): boolean {
+    return this.isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  }  
 
 }

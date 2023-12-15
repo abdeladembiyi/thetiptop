@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-participation-modal',
@@ -7,5 +7,12 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrl: './participation-modal.component.css'
 })
 export class ParticipationModalComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public message: string) { }
+  constructor(
+    public dialogRef: MatDialogRef<ParticipationModalComponent>,
+    @Inject(MAT_DIALOG_DATA) public date: {title: string, message: string}
+    ) { }
+
+    closeDialog() {
+      this.dialogRef.close();
+    }
 }
