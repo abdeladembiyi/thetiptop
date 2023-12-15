@@ -8,14 +8,18 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  emailControl  = new FormControl('test@test.com');
-  passwordControl   = new FormControl('test123');
+  emailControl  = new FormControl('');
+  passwordControl   = new FormControl('');
   errorMessage = '';
 
   constructor(private router: Router) {}
 
   onLogin(): void {
-    if (this.emailControl .value === 'test@test.com' && this.passwordControl  .value === 'test123') {
+    console.log(this.emailControl.value);
+    console.log(this.passwordControl.value);
+    console.log(this.passwordControl .value === 'admin');
+    console.log(this.emailControl.value === 'admin@admin.com');
+    if (this.emailControl.value == 'admin@admin.com' && this.passwordControl.value == 'admin') {
       this.router.navigate(['/accueil']);
       localStorage.setItem('isLoggedIn', 'true');
     } else {
